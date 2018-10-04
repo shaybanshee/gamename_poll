@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We had to create a poll voting concept; create a voting option and then link to a database to pull 
+information in order to increase voting. 
 
-Things you may want to cover:
+We utilized Ruby on Rails, HTML & CSS for our current iteration. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the final page and database of a larger authentication driven polling system we will attempt to build. 
