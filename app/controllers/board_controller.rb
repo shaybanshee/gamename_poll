@@ -15,16 +15,17 @@ class BoardController < ApplicationController
 
 	def destroy
 		@pollit = Pollit.find params[:id]
-		@pollit.destroy 
+		@pollit.destroy
+	
 
-		redirect_to Pollit_url 
+		redirect_to board_voting_url
 	end 
 	
 	def update
-		@pollit =pollit.find params[:id] 
+		@pollit = Pollit.find params[:id] 
 		@pollit.vote += 1
 		@pollit.save
 
-		redirect_to Pollit_url
+		redirect_to board_voting_url
 	end
 end

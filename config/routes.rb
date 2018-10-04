@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'board/voting'
   get 'board/create'
+  get 'board/update'
+  get 'board/destroy'
 
 
 	root 'board#voting'

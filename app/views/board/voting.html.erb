@@ -4,12 +4,26 @@
     <div>Add Gamer Name: <input id="name" name="name" type="string"></div> <br>
    	
 
-    <input type="submit" onclick="update()" value="submit" style="background-color: green; border-radius: 200px;">
+    <input type="submit"  value="submit" style="background-color: green; border-radius: 200px;">
 
 </form>
 
-<form action="board/voting" method="">
 
 
+
+	<table> 
+
+
+	 <% @pollit.each do |option| %>
+		 <tr>
+		 	<td class="delete"><form action="/board/destroy/" method="destroy"> <input type="submit"  value="delete" style="background-color: red; border-radius: 200px;"><input type="hidden" name="id" value="<%=option.id%>"></form></td>
+		 	<td class= "name"> <%= option.name %> </td>
+		 	<td class= "vote"> <%= option.vote %> </td> 
+		 	<td><form action="/board/update/" method="get"><input type="submit" value="VOTE" style="background-color: green; border-radius: 200px;"><input type="hidden" name="id" value="<%=option.id%>"></form></td>
+		 </tr>
+
+
+		<%end%>
+	</table>
 
 
