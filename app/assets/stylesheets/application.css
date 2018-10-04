@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ .title{
+ 	font-family: helvetica;
+ }
+.name{
+	width: 20vw;
+	height: 5vh; 
+	font-family: helvetica;
+	font-size: 16pt;
+			}
+
+.vote{
+ font-family: helvetica; 
+	
+
+			}
+.add{
+	 font-family: helvetica; 
+
+}
+
+.textbox{
+	border-radius: 100px;
+}

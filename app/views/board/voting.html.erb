@@ -1,10 +1,10 @@
-<h1> VOTE HERE, here is where we will put the form </h1>
+<h1 class="title"> Pollz R' Us</h1>
 <form action="/board/create/" method="update">
     <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
-    <div>Add Gamer Name: <input id="name" name="name" type="string"></div> <br>
+    <div class="add">Add Gamer Name: <input class="textbox" id="name" name="name" type="string"></div> <br>
    	
 
-    <input type="submit"  value="submit" style="background-color: green; border-radius: 200px;">
+    <input type="submit"  value="SUBMIT" style="background-color: lightblue; border-radius: 150px;font-family: helvetica;">
 
 </form>
 
@@ -16,10 +16,10 @@
 
 	 <% @pollit.each do |option| %>
 		 <tr>
-		 	<td class="delete"><form action="/board/destroy/" method="destroy"> <input type="submit"  value="delete" style="background-color: red; border-radius: 200px;"><input type="hidden" name="id" value="<%=option.id%>"></form></td>
+		 	<td class="delete"><form action="/board/destroy/" method="destroy"> <input type="submit"  value="DELETE" style="background-color: white; border-radius: 150px;font-family: helvetica;"><input type="hidden" name="id" value="<%=option.id%>"></form></td>
 		 	<td class= "name"> <%= option.name %> </td>
-		 	<td class= "vote"> <%= option.vote %> </td> 
-		 	<td><form action="/board/update/" method="get"><input type="submit" value="VOTE" style="background-color: green; border-radius: 200px;"><input type="hidden" name="id" value="<%=option.id%>"></form></td>
+		 	<td class= "vote"> <div> VOTES: <%= option.vote %> </td> </div>
+		 	<td><form action="/board/update/" method="get"><input type="submit" value="+" style="background-color: pink; border-radius: 150px; font-family: helvetica;"><input type="hidden" name="id" value="<%=option.id%>"></form></td>
 		 </tr>
 
 
