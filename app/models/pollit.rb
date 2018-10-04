@@ -1,0 +1,3 @@
+class Pollit < ApplicationRecord
+	 
+end
